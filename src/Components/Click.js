@@ -12,9 +12,17 @@ class Click extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      range: 100
+      range: 0
     };
   }
+
+  updateRange = (e) => {
+    // this.setState({ range: this.state.range + e.target.value });
+    // if (this.state.range >= 200) {
+    //     this.setState({ range: 200});
+    // }
+    this.setState({range: e.target.value});
+  };
 
   render() {
     //   const { range } = this.props;
@@ -24,7 +32,7 @@ class Click extends React.Component {
           id="range"
           type="range"
           value={this.state.range}
-          min="60"
+          min="0"
           max="200"
           step="1"
           onChange={this.updateRange}

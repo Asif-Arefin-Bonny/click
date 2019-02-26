@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Click from "./Components/Click";
+import NameForm from "./Components/NameForm";
 
 class App extends React.Component {
   // constructor(props) {
@@ -20,7 +21,13 @@ class App extends React.Component {
   render() {
     // const { rangeVal } = this.state;
     // return <Click range={rangeVal} updateRange={this.updateRange} />;
-    return <Click />;
+    return(
+      <>
+      {/* <NameForm /> */}
+      <Click />
+      </>
+    );
+
   }
 }
 
